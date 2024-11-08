@@ -1,0 +1,11 @@
+type Result = 
+ variant {
+   err: text;
+   ok: text;
+ };
+service : {
+  isAuthenticated: () -> (bool);
+  login: () -> (Result);
+  logout: () -> (Result);
+  whoami: () -> (text);
+}
